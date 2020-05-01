@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <div class="form-group row">
+            <label for="DOCNAME" class="col-sm-2 col-form-label">Doctor's Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="DocName" placeholder="Enter your name" name="DocName">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="ID" class="col-sm-2 col-form-label">ID</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="DocID" placeholder="Your ID" name = "DocID">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+{% endblock %}

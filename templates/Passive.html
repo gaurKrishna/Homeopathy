@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Check Up
+{% endblock %}
+
+{% block main %}
+    <form action="/remove" method="post">
+        <div class="form-group">
+            <label for="RmCity">Patient City</label>
+            <input autocomplete="off" autofocus class="form-control" id = "Rmcity" name="Rmcity" placeholder="City/Town" type="text">
+        </div>
+        <button type="submit" class="btn btn-primary">Remove</button>
+    </form>
+{% endblock %}

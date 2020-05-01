@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Check Up
+{% endblock %}
+
+{% block main %}
+    <form action="/patient" method="post">
+        <div class="form-group row">
+        <label for="Patient" class="col-sm-2 col-form-label">Name of the Patient</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="PatientName" aria-describedby="reghelp" placeholder="Enter patient's name" name="PatientName">
+            </div>
+        </div>
+        <div class="form-group row">
+        <label for="PatID" class="col-sm-2 col-form-label">Patient Id</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="PatientId" placeholder="Enter patient's ID" name="PatientId">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Check Up</button>
+    </form>
+{% endblock %}

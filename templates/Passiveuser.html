@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Patient Id</th>
+                <th scope="col">City</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <th scope="row">{{ student["name"] }}</th>
+                    <td>{{ student["id"] }}</td>
+                    <td>{{ student["year"] }}</td>
+                    <td>{{ student["event"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
